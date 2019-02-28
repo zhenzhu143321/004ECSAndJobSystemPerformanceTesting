@@ -560,7 +560,7 @@ MonoBehaviour:
   enemyShipPrefab: {fileID: 3176849382152483690, guid: 3f30da4d4983b504488a1a42a7b7789d,
     type: 3}
   enemySpeed: 12
-  enemyShipCount: 2000
+  enemyShipCount: 0
   enemyShipIncremement: 500
 --- !u!4 &1142627818
 Transform:

@@ -23,6 +23,7 @@ namespace ECSMethod
 
         protected override void OnUpdate()
         {
+           
             for (int i = 0; i < enemies.Length; i++)
             {
                 Position position = enemies.positions[i];

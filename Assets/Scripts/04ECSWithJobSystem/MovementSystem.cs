@@ -31,10 +31,11 @@ namespace ECSWithJobSystemMethod
         }
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
+            //Debug.Log("ECSWithJobSystemMethod");
             MovementJob moveJob = new MovementJob
             {
-                topBound =200,
-                bottomBound = -200,
+                topBound =100,
+                bottomBound = -150,
                 deltaTime = Time.deltaTime
             };
 
