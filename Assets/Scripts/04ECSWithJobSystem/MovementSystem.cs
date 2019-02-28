@@ -11,6 +11,7 @@ namespace ECSWithJobSystemMethod
     public class MovementSystem : JobComponentSystem
     {
         [BurstCompile]
+        
         struct MovementJob : IJobProcessComponentData<Position, Rotation, MoveSpeed>
         {
             public float topBound;
@@ -34,13 +35,13 @@ namespace ECSWithJobSystemMethod
             //Debug.Log("ECSWithJobSystemMethod");
             MovementJob moveJob = new MovementJob
             {
-                topBound =100,
-                bottomBound = -150,
+                topBound =GameManager.GM.topBound,
+                bottomBound = GameManager.GM.bottomBound,
                 deltaTime = Time.deltaTime
             };
 
             JobHandle moveHandle = moveJob.Schedule(this,inputDeps);
-
+            //moveHandle.Complete();
             return moveHandle;
            
         }
